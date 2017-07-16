@@ -21,7 +21,7 @@
 
         // create particles
         circles = [];
-        for(var x = 0; x < 200; x++) {
+        for(var x = 0; x < 250; x++) {
             var c = new Circle();
             circles.push(c);
         }
@@ -30,8 +30,8 @@
 
     // Event handling
     function addListeners() {
-        window.addEventListener('scroll', scrollCheck);
-        window.addEventListener('resize', resize);
+        window.addEventListener('scroll', scrollCheck());
+        window.addEventListener('resize', resize());
     }
 
     function scrollCheck() {
@@ -81,7 +81,8 @@
             _this.pos.y = height+Math.random()*100;
             _this.alpha = 0.1+Math.random()*0.10;
             _this.scale = 0.1+Math.random()*1;
-            _this.velocity = Math.random()*1;
+            _this.velocity = Math.random()*.7;
+
         }
 
         this.draw = function() {
@@ -93,8 +94,8 @@
             _this.pos.y -= _this.velocity;
             _this.alpha -= Math.random()*0.0005;
             _this.scale += Math.random()*.01;
-            // when random number is tiny call flare function to emulate a flare effect on SOME circles
-            (randomNum <= .001) ? flare() : "";
+            // IF random number is tiny call flare function to emulate a flare effect on SOME circles
+            (randomNum <= .0007) ? flare() : randomNum = randomNum;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.scale*5, 0, 2 * Math.PI, false);
             ctx.fillStyle = 'rgba(155,255,255,'+ _this.alpha/2+')';

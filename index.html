@@ -6,15 +6,40 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TimelineMax.min.js"></script>
-
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
   </head>
   <body>
     <div id="mainContainer">
       <div id="large-header" class="large-header">
         <object class="logoObject main-title">
           <embed class="mdddLogo" src="img/mdddLogo.svg" />
+          <div class="animatedName">
+            <ul class="nameHeader">
+              <li class="letter">MIKE&nbsp;</li>
+              <li class="letter">DREILING</li>
+            </ul>
+            <ul class="nameHeader">
+              <li class="tag">DESIGNER&nbsp;|&nbsp;</li>
+              <li class="tag">DEVELOPER</li>
+            </ul>
+          </div>
         </object>
         <canvas id="demo-canvas"></canvas>
+        <div class="icon-scroll"></div>
+      </div>
+      <div id="workNav">
+        <div class="designTab">
+          <h2>DESIGNER</h2>
+          <p class="designSubTitle hidden">VIEW MY WORK</p>
+        </div>
+        <div class="developTab">
+          <h2>DEVELOPER</h2>
+          <p class="developSubTitle hidden">VIEW MY WORK</p>
+        </div>
       </div>
     </div>
 

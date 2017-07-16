@@ -1,3 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+h1 {
+  font-family: Open Sans;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: Roboto Slab;
+  letter-spacing: 2px;
+}
+
+ul {
+  padding: 0em;
+  margin: 0em;
+}
+
+.nameHeader {
+  font-size: 3.0em;
+  display: inherit;
+  list-style: none;
+  font-family: Open Sans;
+  color: white;
+  margin-left: 0em;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
 body {
   background-color:black;
   width:100%;
@@ -21,17 +51,167 @@ body {
 }
 
 .mdddLogo {
-  width: 80%;
+  width: 175px;
 }
 
 .main-title {
 	position: absolute;
 	margin: 0;
 	padding: 0;
-	color: #f9f1e9;
 	text-align: center;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate3d(-50%,-50%,0);
-	transform: translate3d(-50%,-50%,0);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+}
+
+.icon-scroll, .icon-scroll:before {
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll {
+  width: 25px;
+  height: 45px;
+  margin-left: -20px;
+  top: 90%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+}
+
+.icon-scroll:before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  margin-left: -2px;
+  top: 6px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+  animation-delay: 4s;
+}
+
+@keyframes scroll {
+  0% {opacity: 1;}
+  100% {opacity: 0; transform:translateY(26px);}
+}
+
+#workNav {
+  background-image: url('../img/workNavBkgd.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-bottom: 20px solid black;
+}
+
+#workNav h2 {
+  font-size: 2.5em;
+}
+
+.designTab {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+.designTab:before {
+  position: absolute;
+  right: 0;
+  content: "";
+  height: 66%;
+  border-right: 1px solid black;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.developTab {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+}
+
+.animatedName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0em;
+  text-align: left;
+  margin-left: 1em;
+}
+
+.tag {
+  font-size: .5em;
+}
+
+@media screen and (max-width: 900px) {
+
+  .main-title {
+    flex-direction: column;
+  }
+
+  .mdddLogo {
+    margin: 0 auto;
+  }
+
+  .animatedName {
+    margin-left: 0em;
+    margin-top: 1em;
+  }
+
+  .nameHeader {
+    justify-content:center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .nameHeader {
+    font-size: 2.4em;
+  }
+
+  .mdddLogo {
+    width: 135px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  #workNav {
+    flex-direction: column;
+  }
+
+  .designTab, .developTab {
+    width: 100%;
+  }
+
+  .designTab:before {
+    width: 66%;
+    height: 100%;
+    left: 5%;
+    margin: 0em 2em 0em 2em;
+    padding: 0em 2em;
+    border-bottom: 1px solid black;
+    border-right: 0em;
+  }
+
 }
