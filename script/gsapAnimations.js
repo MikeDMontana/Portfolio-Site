@@ -5,10 +5,28 @@ window.onload = () => {
   TweenMax.from(".tag", .2, {opacity:0, color:"lime", delay:4.5, y:-3, force3D:true}, 0.2);
 }
 
-$(".designTab h2").hover(function(){
+$(".designTab").hover(function(){
         $('.designSubTitle').toggleClass('hidden');
+        $('.shortLine').toggleClass('hidden');
 });
 
-$(".developTab h2").hover(function(){
+$(".developTab").hover(function(){
         $('.developSubTitle').toggleClass('hidden');
+        $('.shortLine2').toggleClass('hidden');
 });
+
+var controller = new ScrollMagic.Controller();
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".trigger1"
+})
+  .setTween(".animate1", 1.5, {opacity: 1, x: 200})
+  .addTo(controller);
+
+var controller2 = new ScrollMagic.Controller();
+
+var scene2 = new ScrollMagic.Scene({
+  triggerElement: ".trigger1"
+})
+  .setTween(".animate2", 1.5, {opacity: 1, x: -200})
+  .addTo(controller2);

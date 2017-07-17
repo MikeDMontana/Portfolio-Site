@@ -11,6 +11,8 @@
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   </head>
   <body>
     <div id="mainContainer">
@@ -31,14 +33,16 @@
         <canvas id="demo-canvas"></canvas>
         <div class="icon-scroll"></div>
       </div>
-      <div id="workNav">
-        <div class="designTab">
-          <h2>DESIGNER</h2>
-          <p class="designSubTitle hidden">VIEW MY WORK</p>
+      <div id="workNav" class="scrollContent">
+        <div class="designTab trigger1">
+          <h2 class="animate1">DESIGNER</h2>
+          <div class="shortLine animate1 hidden"></div>
+          <p class="designSubTitle hidden animate1"><em>VIEW MY WORK</em></p>
         </div>
         <div class="developTab">
-          <h2>DEVELOPER</h2>
-          <p class="developSubTitle hidden">VIEW MY WORK</p>
+          <h2 class="animate2">DEVELOPER</h2>
+          <div class="shortLine2 animate2 hidden"></div>
+          <p class="developSubTitle hidden animate2"><em>VIEW MY WORK</em></p>
         </div>
       </div>
     </div>
