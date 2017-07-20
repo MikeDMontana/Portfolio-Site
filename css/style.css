@@ -42,6 +42,7 @@ body {
   justify-content: center;
   overflow: hidden;
   z-index: 1;
+  background-color: #300000;
 }
 
 .logoObject {
@@ -103,16 +104,34 @@ body {
   100% {opacity: 0; transform:translateY(26px);}
 }
 
+#workSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 #workNav {
-  background-image: url('../img/workNavBkgd.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
-  flex-direction: row;
-  border-bottom: 20px solid black;
+  flex-direction: column;
+  background-color: white;
+  width:50%;
+}
+
+#workAbout {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  width:50%;
+  background-image: url("../img/redStarBkgd.jpg");
+  background-size: cover;
 }
 
 #workNav h2 {
@@ -137,7 +156,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   text-align: center;
   height: 100%;
   position: relative;
@@ -145,10 +164,14 @@ body {
 
 .designTab:before {
   position: absolute;
-  right: 0;
+  left: 5%;
   content: "";
-  height: 66%;
-  border-right: 1px solid black;
+  height: 100%;
+  width: 66%;
+  border-bottom: 1px solid black;
+  margin: 0em 2em 0em 2em;
+  padding: 0em 2em;
+
 }
 
 .designTab:hover {
@@ -176,7 +199,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 
@@ -217,6 +240,21 @@ body {
   margin: 1.2em auto;
 }
 
+.aboutDescription {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.aboutText {
+  color: white;
+  width: 50%;
+  line-height: 1.8em;
+  opacity: 0;
+  bottom: 20;
+}
+
+
 @media screen and (max-width: 900px) {
 
   .main-title {
@@ -234,6 +272,22 @@ body {
 
   .nameHeader {
     justify-content:center;
+  }
+
+  #workSection {
+    flex-direction: column;
+  }
+
+  .designTab, .developTab, .aboutDescription {
+    width: 100%;
+  }
+
+  #workNav {
+    width: 100%;
+  }
+
+  #workAbout {
+    width: 100%;
   }
 }
 

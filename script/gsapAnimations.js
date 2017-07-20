@@ -15,6 +15,7 @@ $(".developTab").hover(function(){
         $('.shortLine2').toggleClass('hidden');
 });
 
+//design tab move in
 var controller = new ScrollMagic.Controller();
 
 var scene = new ScrollMagic.Scene({
@@ -23,6 +24,7 @@ var scene = new ScrollMagic.Scene({
   .setTween(".animate1", 1.5, {opacity: 1, x: 200})
   .addTo(controller);
 
+// develop tab move in
 var controller2 = new ScrollMagic.Controller();
 
 var scene2 = new ScrollMagic.Scene({
@@ -30,3 +32,12 @@ var scene2 = new ScrollMagic.Scene({
 })
   .setTween(".animate2", 1.5, {opacity: 1, x: -200})
   .addTo(controller2);
+
+//about text fade in
+  var controller3 = new ScrollMagic.Controller();
+
+  var scene3 = new ScrollMagic.Scene({
+    triggerElement: ".trigger1"
+  })
+    .setTween(".animate3", 5, {opacity: 1, y:-20})
+    .addTo(controller3);

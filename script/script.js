@@ -95,11 +95,12 @@
             _this.alpha -= Math.random()*0.0005;
             _this.scale += Math.random()*.01;
             // IF random number is tiny call flare function to emulate a flare effect on SOME circles
-            (randomNum <= .0007) ? flare() : randomNum = randomNum;
+            (randomNum <= .0007) ? flare() : "";
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.scale*5, 0, 2 * Math.PI, false);
             ctx.fillStyle = 'rgba(155,255,255,'+ _this.alpha/2+')';
             ctx.fill();
+            (_this.alpha <= 0) ? init() : "";
         };
     }
 
