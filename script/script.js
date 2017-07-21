@@ -74,6 +74,7 @@
           // use setTimeout to wait a half second then gracefully animate using setInterval
           // ... to decrease alpha by .10 every 100 miliseconds
           setTimeout(function(){setInterval(function(){_this.alpha -= .10;}, 100)}, 500);
+          setTimeout(function(){this.draw();}, 1000);
         }
 
         function init() {
@@ -95,12 +96,15 @@
             _this.alpha -= Math.random()*0.0005;
             _this.scale += Math.random()*.01;
             // IF random number is tiny call flare function to emulate a flare effect on SOME circles
-            (randomNum <= .0007) ? flare() : "";
+            if (randomNum <= .0007) {
+              setInterval(function(){_this.alpha += .05;(_this.alpha >= .6) ? clearInterval() : ""; }, 100);
+              setTimeout(function(){setInterval(function(){_this.alpha -= .10;}, 100)}, 500);
+              setTimeout(function(){_this.alpha=0}, 1000);
+            }
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.scale*5, 0, 2 * Math.PI, false);
             ctx.fillStyle = 'rgba(155,255,255,'+ _this.alpha/2+')';
             ctx.fill();
-            (_this.alpha <= 0) ? init() : "";
         };
     }
 
