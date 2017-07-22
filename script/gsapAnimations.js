@@ -7,6 +7,19 @@ window.onload = () => {
   TweenMax.staggerFrom(".letter", 1, {x:-10, opacity:0, color:"lime", delay:3, force3D:true}, 0.2);
   TweenMax.from(".tag", .2, {opacity:0, color:"lime", delay:3.75, y:-3, force3D:true}, 0.2);
 
+  var tl1 = new TimelineMax({repeat: -1});
+
+  tl1.insert(TweenMax.to($("img.headerBkgd1"), 4, {css:{autoAlpha:1}, delay:4}) );
+  tl1.insert(TweenMax.to($("img.headerBkgd1"), 2, {css:{autoAlpha:0}, delay:8}) );
+  tl1.insert(TweenMax.to($("img.headerBkgd2"), 4, {css:{autoAlpha:1}, delay:10}) );
+  tl1.insert(TweenMax.to($("img.headerBkgd2"), 2, {css:{autoAlpha:0}, delay:14}) );
+  tl1.insert(TweenMax.to($("img.headerBkgd3"), 4, {css:{autoAlpha:1}, delay:16}) );
+    tl1.insert(TweenMax.to($("img.headerBkgd3"), 2, {css:{autoAlpha:0}, delay:20}) );
+  tl1.insert(TweenMax.to($("img.headerBkgd4"), 4, {css:{autoAlpha:1}, delay:22}) );
+  tl1.insert(TweenMax.to($("img.headerBkgd4"), 2, {css:{autoAlpha:0}, delay:26}) );
+  tl1.insert(TweenMax.to($("img.headerBkgd5"), 4, {css:{autoAlpha:1}, delay:28}) );
+    tl1.insert(TweenMax.to($("img.headerBkgd5"), 2, {css:{autoAlpha:0}, delay:32}) );
+
   $(".designTab").hover(function(){
           $('.designSubTitle').toggleClass('hidden');
           $('.shortLine').toggleClass('hidden');
