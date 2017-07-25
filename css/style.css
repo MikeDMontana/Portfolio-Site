@@ -408,6 +408,8 @@ body {
 .cvAboutText {
   padding: 4em 15% 2em 15%;
   line-height: 1.8em;
+  opacity: 0;
+  bottom: 20;
 }
 
 .cvBtnSection {
@@ -448,6 +450,7 @@ ul.cvSocialIcons {
 ul.cvSocialIcons li {
   list-style: none;
   padding: 0em .2em;
+  left: 10;
 }
 
 ul.cvSocialIcons img {
@@ -480,9 +483,37 @@ nav {
 
 .navSocialIcons li img {
   position: relative;
-  height: 100%;
-  margin-left: 1em;
-  margin-top: 10px;
+  height: 40%;
+  margin-left: 1.3em;
+  margin-top: 20px;
+  opacity: 0.5;
+}
+
+.navSocialIcons li img:hover {
+  opacity:1;
+}
+
+.portfolioItems {
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding: 4em 4em 0em 4em;
+}
+
+.portfolioItemFocus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.portfolioItemText {
+  background-color:lightgray;
+  padding: 2em;
 }
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<MEDIA QUERIES>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -562,6 +593,13 @@ nav {
     padding: 2em 15% 1em 15%;
   }
 
+  .navSocialIcons {
+    justify-content: center;
+  }
+
+  nav {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 700px) {

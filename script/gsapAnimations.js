@@ -1,4 +1,6 @@
 window.onload = () => {
+  var socialStagger = TweenMax.staggerFrom(".socialIcon", 1, {x:-10, opacity:0}, 0.2);
+
   TweenLite.set(".icon-scroll", {delay:7.9, visibility:"visible"});
   TweenMax.from(".mdddLogo", 2, {scale:.5, opacity:0, rotation:30, ease:Ease.easeOut, delay:1});
   TweenMax.from(".icon-scroll", 1, {opacity:0, delay:8});
@@ -56,4 +58,22 @@ window.onload = () => {
     })
       .setTween(".animate3", 5, {opacity: 1, y:-20})
       .addTo(controller3);
+
+  //cvAbout text fade in
+    var controller4 = new ScrollMagic.Controller();
+
+    var scene4 = new ScrollMagic.Scene({
+      triggerElement: ".cvTrigger"
+    })
+      .setTween(".cvAboutText", 5, {opacity: 1, y:-20})
+      .addTo(controller4);
+
+  //social Icons Move In
+    var controller5 = new ScrollMagic.Controller();
+
+    var scene4 = new ScrollMagic.Scene({
+      triggerElement: ".cvTrigger"
+    })
+      .setTween(socialStagger)
+      .addTo(controller5);
 }
