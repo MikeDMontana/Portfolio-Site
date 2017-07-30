@@ -67,15 +67,15 @@
             init();
         })();
 
-        function flare() {
-          // use setInterval to gracefully animate circle getting brighter by .05 (every 100 miliseconds) until...
-          // ... circle gets to .6 alpha. Then stop that animation
-          setInterval(function(){_this.alpha += .05;(_this.alpha >= .6) ? clearInterval() : ""; }, 100);
-          // use setTimeout to wait a half second then gracefully animate using setInterval
-          // ... to decrease alpha by .10 every 100 miliseconds
-          setTimeout(function(){setInterval(function(){_this.alpha -= .10;}, 100)}, 500);
-          setTimeout(function(){this.draw();}, 1000);
-        }
+        // function flare() {
+        //   // use setInterval to gracefully animate circle getting brighter by .05 (every 100 miliseconds) until...
+        //   // ... circle gets to .6 alpha. Then stop that animation
+        //   setInterval(function(){_this.alpha += .05;(_this.alpha >= .6) ? clearInterval() : ""; }, 100);
+        //   // use setTimeout to wait a half second then gracefully animate using setInterval
+        //   // ... to decrease alpha by .10 every 100 miliseconds
+        //   setTimeout(function(){setInterval(function(){_this.alpha -= .10;}, 100)}, 500);
+        //   setTimeout(function(){this.draw();}, 1000);
+        // }
 
         function init() {
             _this.pos.x = Math.random()*width;

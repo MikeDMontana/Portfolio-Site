@@ -498,23 +498,84 @@ nav {
   width: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  padding: 4em 4em 0em 4em;
+  justify-content: column;
+  background-color:white;
+
 }
 
 .portfolioItemFocus {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 80%;
-  margin: 0 auto;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.portfolioItemFocus img {
+  height: 80%;
 }
 
 .portfolioItemText {
   background-color:lightgray;
   padding: 2em;
+
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
 }
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 600px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 600px;
+  line-height: 600px;
+}
+
+a.leftNext, a.rightNext {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.leftNext:hover, a.rightNext:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+  color: white;
+}
+
+a.leftNext {
+  border-radius: 0 2px 2px 0;
+  color: white;
+}
+
+a.rightNext {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+  color: white;
+}
+
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<MEDIA QUERIES>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 

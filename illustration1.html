@@ -4,15 +4,6 @@
     <meta charset="utf-8">
     <title>Mike Dreiling | Developer, Designer</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TimelineMax.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   </head>
   <body>
     <div id="designPageContainer">
@@ -24,18 +15,30 @@
           <h2 class="designPageTitle"><a href="index.html" alt="View Mike Dreiling's Design Home Page">HOME</a></h2>
         </div>
       </div>
-      <div class="portfolioItems">
-        <div class="portfolioItemFocus">
-          <img src="http://loremflickr.com/400/350?random=1" />
-          <p class="portfolioItemText">This item is really neat because I put a lot of work into it and I had an opportunity to help a business
-            with a really cool campaign and saw neat results.  I really liked this process a lot and it helped me to linear-gradient
-            great things about myself.  Cool stuff!</p>
-          <img src="http://loremflickr.com/400/350?random=1" />
-          <p class="portfolioItemText">This item is really neat because I put a lot of work into it and I had an opportunity to help a business
-            with a really cool campaign and saw neat results.  I really liked this process a lot and it helped me to linear-gradient
-            great things about myself.  Cool stuff!</p>
-        </div>
+
+      <div id="slider" class="portfolioItems">
+        <a class="leftNext" href="#" alt="View Previous Portfolio Image"><</button>
+        <a class="rightNext" href="#" alt="View Next Portfolio Image">></a>
+        <ul class="portfolioItemFocus">
+          <li><img src="img/dunken.jpg" /></li>
+          <li><img src="img/case.jpg" />
+          <li><img src="img/eIsForElephantillo.jpg" /></li>
+          <li><img src="img/hillsIllo.jpg" />
+          <li><img src="img/caterpillarillo.jpg" /></li>
+        </ul>
       </div>
+
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TimelineMax.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="script/gsapAnimations.js"></script>
+    <script type="text/javascript" src="script/script.js"></script>
   </body>
   </html>
