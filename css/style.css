@@ -11,6 +11,10 @@ a {
   cursor: pointer;
 }
 
+button:focus {
+  outline:0;
+}
+
 li {
   cursor: pointer;
 }
@@ -383,15 +387,19 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
+  position: relative;
 }
 
 .designSquares li {
-  width:25%;
+  width:33%;
   height: 33%;
+  margin: 1em;
+  position: relative;
 }
 
 .designSquares li img{
   width:100%;
+  position: relative;
 }
 
 #cvSectionContainer {
@@ -403,10 +411,18 @@ body {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.centeringCVsection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
 }
 
 .cvAboutText {
-  padding: 4em 15% 2em 15%;
+  padding: 0 15%;
   line-height: 1.8em;
   opacity: 0;
   bottom: 20;
@@ -433,7 +449,7 @@ body {
 .cvIconsContainer {
   display: flex;
   flex-direction: column;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
   padding: 0% 20%;
   margin-top: 4em;
 }
@@ -497,10 +513,10 @@ nav {
   height: 100vh;
   width: 80%;
   display: flex;
-  flex-direction: column;
-  justify-content: column;
-  background-color:white;
-
+  flex-direction: row;
+  justify-content: center;
+  background-color:black;
+  position: relative;
 }
 
 .portfolioItemFocus {
@@ -510,47 +526,46 @@ nav {
 }
 
 .portfolioItemFocus img {
-  height: 80%;
+  height: 100%;
 }
 
 .portfolioItemText {
   background-color:lightgray;
   padding: 2em;
-
+}
 
 #slider {
-  position: relative;
   overflow: hidden;
-  margin: 20px auto 0 auto;
+  margin: auto 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1000px !important;
+  height: 600px !important;
 }
 
 #slider ul {
   position: relative;
-  margin: 0;
-  padding: 0;
-  height: 600px;
   list-style: none;
+  margin: auto 0 !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 #slider ul li {
   position: relative;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 500px;
-  height: 600px;
-  line-height: 600px;
+  width: 100%;
+  margin: 0 auto;
 }
+
 
 a.leftNext, a.rightNext {
   position: absolute;
-  top: 40%;
+  top: 50%;
   z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
+  padding: 2%;
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -567,13 +582,16 @@ a.leftNext:hover, a.rightNext:hover {
 
 a.leftNext {
   border-radius: 0 2px 2px 0;
-  color: white;
+  color: black;
+  background-color: darkgray;
+  left: 0;
 }
 
 a.rightNext {
   right: 0;
   border-radius: 2px 0 0 2px;
-  color: white;
+  color: black;
+  background-color: darkgray;
 }
 
 
@@ -642,17 +660,9 @@ a.rightNext {
     width: 135px;
   }
 
-  .cvIconsContainer {
-    margin-top: 2.5em;
-  }
-
 }
 
 @media screen and (max-width: 575px) {
-
-  .cvAboutText {
-    padding: 2em 15% 1em 15%;
-  }
 
   .navSocialIcons {
     justify-content: center;
@@ -692,6 +702,11 @@ a.rightNext {
     width: 100%;
   }
 
+  .designSquares li {
+    margin: 0.5em;
+    width: 33%;
+  }
+
   ul.cvSocialIcons {
     padding: 0em;
   }
@@ -715,6 +730,15 @@ a.rightNext {
     padding: 0em 2em;
     border-bottom: 1px solid black;
     border-right: 0em;
+  }
+
+  .designSquares li {
+    width: 70%;
+  }
+
+  .designSquares {
+    overflow: auto;
+    height: auto;
   }
 
 }
