@@ -594,6 +594,46 @@ a.rightNext {
   background-color: darkgray;
 }
 
+.grid li img {
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+.grid li {
+  width: 33%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: block;
+}
+
+.grid {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.illoPageHeader {
+  width: 100%;
+  height: 200px;
+  display: flex;
+}
+
+.illoPageHeader img {
+  width: 150px;
+}
+
+.illoPageNav {
+  list-style: none;
+  color: white;
+}
+
+.illoPageNav h2{
+  font-size: small;
+}
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<MEDIA QUERIES>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
