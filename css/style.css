@@ -601,16 +601,28 @@ a.rightNext {
   width: 100%;
 }
 
-.grid li {
-  width: 33%;
-  padding: 0;
+.grid li img:hover {
+  border: 1px solid darkgray;
+}
+
+.grid-item {
+  width: 30%;
+  padding: 1.5%;
   margin: 0;
   float: left;
   display: block;
 }
 
+.grid-item--gigante {
+  width: 60%;
+  z-index: 2;
+}
+
+
 .grid {
   width: 100%;
+  padding: 0 2em;
+  margin: 0 auto;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -618,22 +630,34 @@ a.rightNext {
 
 .illoPageHeader {
   width: 100%;
-  height: 200px;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 200px;
+  padding: 1em;
+  background-image: url("../img/redStarBkgd.jpg");
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 1em;
 }
 
 .illoPageHeader img {
-  width: 150px;
+  width: 100px;
+  margin: .3em 0;
 }
 
 .illoPageNav {
   list-style: none;
   color: white;
+  padding: 2em;
 }
 
 .illoPageNav h2{
-  font-size: small;
+  text-align: left;
+  margin-bottom:.3em;
+  margin-left: .2em;
+  font-size: medium;
 }
+
 
 /*<<<<<<<<<<<<<<<<<<<<<<<<<<<MEDIA QUERIES>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 

@@ -11,25 +11,35 @@
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous">
     </script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   </head>
+
   <body>
-    <div id="designPageContainer">
-      <div class="designPageHeader">
-        <img src="img/mdddLogoStatic.svg" alt="Mike Dreiling Designer Developer Logo" />
-        <div class="designPageNav">
-          <h2 class="designPageTitle"><a href="design.html" alt="View Mike Dreiling's Design Work">DESIGN</a></h2>
-          <h2 class="designPageTitle"><a href="develop.html" alt="View Mike Dreiling's App Development Work">DEVELOP</a></h2>
-          <h2 class="designPageTitle"><a href="index.html" alt="View Mike Dreiling's Design Home Page">HOME</a></h2>
-        </div>
-      </div>
-      <ul class="designSquares">
-        <li><a href="https://brewtour-66745.firebaseapp.com/brewerysearch" target="_blank" alt="Click To Go To The BrewTour App"><img src="img/brewTourDevelopFeatImage.jpg" /></a></li>
-        <li><a href="https://foodies-findit.herokuapp.com/" target="_blank" alt="Click To Go To The Foodies Find It! App"><img src="img/foodiesFindItFeatImage.jpg" /></a></li>
-        <li><a href="https://gentle-oasis-76131.herokuapp.com/" target="_blank" alt="Click To Go To The Pairs Generator App"><img src="img/PairsGeneratorFeatImage.jpg" /></a></li>
-        <li><a href="https://codepen.io/designermiked/pen/XezoqP" target="_blank" alt="Click To Go To The P5 Meteor Shower Demo"><img src="img/meteorShowerFeatImage.jpg" /></a></li>
+    <div class="illoPageHeader">
+      <img src="img/mdddLogoStatic.svg" alt="Mike Dreiling Designer Developer Logo" />
+      <ul class="illoPageNav">
+        <li><h2 class="illoPageTitle"><a href="design.html" alt="View Mike Dreiling's Design Work">DESIGN</a></h2></li>
+        <li><h2 class="illoPageTitle"><a href="develop.html" alt="View Mike Dreiling's App Development Work">DEVELOP</a></h2></li>
+        <li><h2 class="illoPageTitle"><a href="illustration1.html" alt="View Mike Dreiling's Illustration Work">ILLUSTRATION</a></h2></li>
+        <li><h2 class="illoPageTitle"><a href="index.html" alt="View Mike Dreiling's Design Home Page">HOME</a></h2></li>
       </ul>
     </div>
+
+    <ul class="grid">
+      <li class="grid-item"><a href="https://brewtour-66745.firebaseapp.com/brewerysearch" target="_blank" alt="Click To Go To The BrewTour App"><img src="img/brewTourDevelopFeatImage.jpg" /></a></li>
+      <li class="grid-item"><a href="https://foodies-findit.herokuapp.com/" target="_blank" alt="Click To Go To The Foodies Find It! App"><img src="img/foodiesFindItFeatImage.jpg" /></a></li>
+      <li class="grid-item"><a href="https://gentle-oasis-76131.herokuapp.com/" target="_blank" alt="Click To Go To The Pairs Generator App"><img src="img/PairsGeneratorFeatImage.jpg" /></a></li>
+      <li class="grid-item"><a href="https://codepen.io/designermiked/pen/XezoqP" target="_blank" alt="Click To Go To The P5 Meteor Shower Demo"><img src="img/meteorShowerFeatImage.jpg" /></a></li>
+    </ul>
+
+    <script>
+      $('.grid').masonry({
+        itemSelector: '.grid-item',
+        transitionDuration: '0.8s',
+        stagger: 30
+      });
+    </script>
   </body>
 </html>
